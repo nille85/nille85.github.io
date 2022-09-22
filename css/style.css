@@ -63,13 +63,13 @@ nav .menu {
 nav .menu>li {
     margin: 0 1rem;
     overflow: hidden;
-    font-size: 1.25em;
+    font-size: 1em;
     text-transform: uppercase;
 }
 
 nav .brand {
     font-family: "Caveat";
-    font-size: 3em;
+    font-size: 1em;
 }
 
 /* Header */
@@ -123,15 +123,11 @@ section.writing .writing-header p{
 } 
 
 .articles {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
+    
     margin-bottom: 10px;
 }
 
 .articles>article {
-    width: 240px;
     height: 375px;
     position: relative;
     text-align: left;
@@ -182,6 +178,31 @@ footer .container{
 @media (min-width: 576px) {
     .container {
         max-width: 540px;
+    }
+    nav .brand {
+        font-size: 3em;
+    }
+    nav .menu>li {
+        font-size: 1.25em;
+    }
+    .articles {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+    
+    .articles>article {
+        width: 240px;
+        height: 375px;
+        position: relative;
+        text-align: left;
+        background-color: var(--white-color);
+        padding: 10px;
+        box-shadow: 0 4px 8px 0 var(--shadow-color);
+        border-radius: 2%;
+        margin:10px;
     }
 }
 
