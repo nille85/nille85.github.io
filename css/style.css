@@ -25,7 +25,7 @@ a {
 /* container */
 .container {
     width: 100%;
-    padding: 15px;
+    padding:10px;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
@@ -80,62 +80,76 @@ header {
 
 
 header .hero {
-    display:flex;
+    display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-header .hero .about, header .hero .subscribe{
-    margin:10px;
+header .hero .about,
+header .hero .subscribe {
+    margin: 10px;
 }
 
-header .hero h1 {
-    text-align: left;
-}
+
 
 header .hero .intro {
-    display:flex;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
-
-header .hero .intro p{
-   max-width: 250px;
-   color: var(--dark-grey-color);
-   font-size:1.25em;
-   text-align: left;
-   padding-left: 10px;
+header .hero .intro img {
+    border-radius: 9999rem;
+    max-width: 200px;
+    padding-right: 10px;
+    order:2
 }
 
-header .hero img{
-    border-radius: 9999rem;
-    width: 213px;
-    padding-right: 10px;
+header .hero .intro h1 {
+    text-align: center;
+}
+
+header .hero .intro p {
+    max-width: 250px;
+    color: var(--dark-grey-color);
+    font-size: 1.25em;
+    text-align: center;
+    padding-left: 10px;
+}
+
+header .hero .iframe {
+    width: 300px;
+    height: 250px;
 }
 
 /* writing */
-section.writing{
+section.writing {
     background-color: var(--light-blue-color);
 }
 
-section.writing .writing-header p{
+section.writing .writing-header p {
     color: var(--dark-grey-color);
-    font-size:1.25em;
-} 
+    font-size: 1.25em;
+}
 
 .articles {
-    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 10px;
     margin-bottom: 10px;
 }
 
 .articles>article {
     height: 375px;
+    width: 240px;
     position: relative;
     text-align: left;
     background-color: var(--white-color);
     padding: 10px;
     box-shadow: 0 4px 8px 0 var(--shadow-color);
     border-radius: 2%;
-    margin:10px;
+    margin: 10px;
 }
 
 .articles>article h3 {
@@ -152,7 +166,7 @@ section.writing .writing-header p{
     bottom: 10px;
 }
 
-.articles>article .more a{
+.articles>article .more a {
     text-transform: uppercase;
     color: var(--blue-color);
 }
@@ -168,9 +182,13 @@ footer {
     background-color: var(--white-color);
 }
 
-footer .container{
-    display:flex;
+footer .container {
+    display: flex;
     justify-content: space-between;
+}
+
+footer .container .social-media{
+    padding-right: 15px;
 }
 
 /* media queries for responsive design*/
@@ -179,30 +197,31 @@ footer .container{
     .container {
         max-width: 540px;
     }
+
     nav .brand {
         font-size: 3em;
     }
+
     nav .menu>li {
         font-size: 1.25em;
     }
-    .articles {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-around;
-        margin-bottom: 10px;
+
+    header .hero .intro h1 {
+        text-align: left;
     }
     
-    .articles>article {
-        width: 240px;
-        height: 375px;
-        position: relative;
+    header .hero .intro p {
         text-align: left;
-        background-color: var(--white-color);
-        padding: 10px;
-        box-shadow: 0 4px 8px 0 var(--shadow-color);
-        border-radius: 2%;
-        margin:10px;
+    }
+
+
+    header .hero .iframe {
+        width: 380px;
+        height: 280px;
+    }
+
+    header .hero img {
+        width: 213px;
     }
 }
 
