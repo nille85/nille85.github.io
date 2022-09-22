@@ -1,3 +1,27 @@
+/* set brand colors*/
+:root {
+    --blue-color: rgb(81 180 233);
+    --light-blue-color: rgb(81 180 233 / 20%);
+    --black-color: #1a1a1a;
+    --dark-grey-color: #808080;
+    --light-grey-color: #f8f9fa;
+    --white-color: #ffffff;
+    --shadow-color: rgb(0 0 0 / 10%);
+}
+
+body {
+    font-family: 'Roboto';
+    color: var(--black-color);
+    background-color: var(--light-grey-color);
+    margin: 0;
+}
+
+a {
+    color: var(--blue-color);
+    text-decoration: none;
+}
+
+
 /* container */
 .container {
     width: 100%;
@@ -15,6 +39,8 @@ nav {
     right: 0;
     left: 0;
     z-index: 1;
+    background-color: var(--white-color);
+    box-shadow: 0 1px 7px var(--shadow-color);
 }
 
 
@@ -37,6 +63,13 @@ nav .menu {
 nav .menu>li {
     margin: 0 1rem;
     overflow: hidden;
+    font-size: 1.25em;
+    text-transform: uppercase;
+}
+
+nav .brand {
+    font-family: "Caveat";
+    font-size: 3em;
 }
 
 /* Header */
@@ -46,13 +79,55 @@ header {
 
 
 
-/* articles */
+header .hero {
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+header .hero .about, header .hero .subscribe{
+    margin:10px;
+}
+
+header .hero h1 {
+    text-align: left;
+}
+
+header .hero .intro {
+    display:flex;
+    justify-content: space-around;
+}
+
+header .hero .intro p{
+   max-width: 250px;
+   color: var(--dark-grey-color);
+   font-size:1.25em;
+   text-align: left;
+   padding-left: 10px;
+}
+
+header .hero img{
+    border-radius: 9999rem;
+    width: 213px;
+    padding-right: 10px;
+}
+
+/* writing */
+section.writing{
+    background-color: var(--light-blue-color);
+}
+
+section.writing .writing-header p{
+    color: var(--dark-grey-color);
+    font-size:1.25em;
+} 
 
 .articles {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 10px;
 }
 
 .articles>article {
@@ -60,6 +135,11 @@ header {
     height: 375px;
     position: relative;
     text-align: left;
+    background-color: var(--white-color);
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 var(--shadow-color);
+    border-radius: 2%;
+    margin:10px;
 }
 
 .articles>article h3 {
@@ -68,6 +148,7 @@ header {
 
 .articles>article .benefit {
     height: 100px;
+    color: var(--dark-grey-color);
 }
 
 .articles>article .more {
@@ -75,11 +156,25 @@ header {
     bottom: 10px;
 }
 
+.articles>article .more a{
+    text-transform: uppercase;
+    color: var(--blue-color);
+}
+
 article .image {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 150px;
+}
+
+footer {
+    background-color: var(--white-color);
+}
+
+footer .container{
+    display:flex;
+    justify-content: space-between;
 }
 
 /* media queries for responsive design*/
